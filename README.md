@@ -1,6 +1,6 @@
 # Linux Guide to SMT32 for EE329
 ## Install 
-Upon cloning repository, change all mentions of stm32_demo to your projects name. Running the script rename.sh will change the names of all files accordingly. Ex:
+Upon cloning repository, change all mentions of stm32_demo to your projects name by running the commands below. Ex:
 ```
 git clone https://github.com/stuntangel/stm32-linux-example my_project
 make rename
@@ -10,7 +10,7 @@ ensure that gcc-arm-embedded-13 and st-flash are installed. Ex:
 ```
 sudo apt-get install -y gcc-arm-embedded-13 st-flash
 ```
-##Linking and creating object files 
+## Linking and creating object files 
 ```
 make link
 ```

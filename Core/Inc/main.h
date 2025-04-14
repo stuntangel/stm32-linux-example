@@ -29,19 +29,7 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l4xx_hal.h"
 
-#define LED_PORT GPIOC
-#define LED_PIN_0  GPIO_PIN_0
-#define LED_PIN_1  GPIO_PIN_1
-#define LED_PIN_2  GPIO_PIN_2
-#define LED_PIN_3  GPIO_PIN_3
-
-typedef unsigned char Byte_t;
-typedef int32_t var_type;
-
 void SystemClock_Config(void);
-var_type TestFunction(var_type num);
-void LedCycle(void);
-void InitializePeriphrials(void);
 
 void Error_Handler(void);
 
@@ -52,3 +40,4 @@ void Error_Handler(void);
 #endif
 
 #endif /* __MAIN_H */
+
