@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "./scripts/build.bash ${relativeFileDirname}",
+      "problemMatcher": "$gcc",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Upload",
+      "type": "shell",
+      "command": "./scripts/upload.bash ${relativeFileDirname}",
+      "dependsOn": "Build"
+    },
+    {
+      "label": "Serial Monitor",
+      "type": "shell",
+      "command": "./scripts/monitor.bash",
+    },
+    {
+      "label": "Upload and Monitor",
+      "type": "shell",
+      "dependsOn": [
+        "Upload",
+        "Serial Monitor"
+      ],
+      "dependsOrder": "sequence"
+    }
+  ]
+}

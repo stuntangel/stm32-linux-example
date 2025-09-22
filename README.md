@@ -1,4 +1,24 @@
 # Linux Guide to SMT32 for EE329
+## Important Update
+The original guide demonstrated how to install the arm gcc toolchain and issue commands by hand to compile, link, and flash. To create a streamlined, more reliable process where users can use the STM32CubeIDE, the toolchains have been properly packaged to resolve issues encountered when downloading the IDE from the company webpage. 
+# New Guide:
+To resolve issues encountered potentially by non-LFS distros, non-X11 DE, etc., the reproducible package manager nix should be installed
+```
+$ sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --no-daemon
+```
+Then to install and run the STM32CubeIDE: 
+```
+cd stm32cubeide.nix
+nix develop
+stm32cubeide
+```
+To install the STM32CubeMX, which can be used to create projects:
+```
+cd stm32cubemx
+nix develop
+stm32cubemxapp
+```
+# Old Guide:
 ## Install 
 Upon cloning repository, change all mentions of stm32_demo to your projects name by running the commands below. Ex:
 ```
